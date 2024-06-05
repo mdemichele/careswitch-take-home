@@ -18,6 +18,14 @@ model Workspace {
   users UsersInWorkspace[]
 }
 
+// Based on the Schema section of the instructions, I think what I want is a 
+// many-to-many relationship between users and workspaces. 
+// Thus, based on this, I'm following an explicit m-n relation method as laid out
+// in the documentation here: https://www.prisma.io/docs/orm/prisma-schema/data-model/relations/many-to-many-relations#explicit-many-to-many-relations
+// NOTE: While Prisma says that they recommend using the implicit method, the explicit
+// method seems a bit more like what I'm used to, so that's what I'm going with for this assignment. 
+// I'm opting for familiarity over efficiency, but in a production environment, I'd definitely
+// not store unnecessary metadata if not needed to optimize for cost and performance.
 model UsersInWorkspace {
   user        User      @relation(fields: [userId], references: [id])
   userId      String
