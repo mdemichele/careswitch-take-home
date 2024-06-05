@@ -25,7 +25,7 @@ model Workspace {
 // NOTE: While Prisma says that they recommend using the implicit method, the explicit
 // method seems a bit more like what I'm used to, so that's what I'm going with for this assignment. 
 // I'm opting for familiarity over efficiency, but in a production environment, I'd definitely
-// not store unnecessary metadata if not needed to optimize for cost and performance.
+// not store unnecessary metadata in order to optimize for cost and performance.
 model UsersInWorkspace {
   user        User      @relation(fields: [userId], references: [id])
   userId      String
