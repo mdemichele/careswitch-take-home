@@ -10,7 +10,15 @@ async function seed() {
 		});
 	});
 
+	const workspaces = await prisma.$transaction(async (txn) => {
+		await txn.workspace.deleteMany();
+		return await txn.workspace.createManyAndReturn({
+			data: [{ name: 'front end team' }, { name: 'Back end team' }]
+		})
+	})
+
 	console.log(`Created users: ${JSON.stringify(users)}`);
+	console.log(`Created workspaces: ${JSON.stringify(workspaces)}`);
 }
 
 seed().finally(async () => {
