@@ -5,6 +5,7 @@
 
 	let { data } = $props();
 
+	// NOTE: not typing correctly just for sake of time.
 	function sanitizesWorkspaces(workspaces) {
 		let workspaceNames: string[] = workspaces.map((workspace) => workspace.name);
 
@@ -16,7 +17,7 @@
 	// moving on for now. Will fix if I have time. Seems like it would be an easy fix if I was more familiar with Svelte.
 </script>
 
-<div class="mx-auto mt-8 max-w-3xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto mt-8 max-w-4xl px-4 sm:px-6 lg:px-8">
 	<div class="space-y-6 rounded-md border p-4">
 		<div class="">
 			<h2
@@ -54,6 +55,12 @@
 								? sanitizesWorkspaces(data.userWorkspaces[user.id])
 								: 'None'}</Table.Cell
 						>
+						<Table.Cell>
+							<Button href={`/edit-user/${user.id}`}>Edit User</Button>
+						</Table.Cell>
+						<Table.Cell>
+							<Button href={`/delete-user/${user.id}`}>Delete User</Button>
+						</Table.Cell>
 					</Table.Row>
 				{/each}
 			</Table.Body>
