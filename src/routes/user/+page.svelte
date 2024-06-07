@@ -1,5 +1,4 @@
 <script lang="ts">
-	import * as Table from '$lib/components/ui/table';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ArrowLeft from 'lucide-svelte/icons/arrow-left';
 	import UserForm from './user-form.svelte';
