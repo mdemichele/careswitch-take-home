@@ -41,3 +41,8 @@ Additional assignment instructions are available on the root route once you navi
 - [Superforms](https://superforms.rocks/)
 - [Tailwind](https://tailwindcss.com/docs/utility-first)
 - [Zod](https://zod.dev/)
+
+
+
+## Comments from me!
+Well, I'm turning in what I got. I just had a Friday afternoon to get this done, so I hacked away at what I could. I obviously let a lot undone, but I felt it was at least a reasonable attempt. Overall, I really enjoyed playing around with all of these technologies and appreciate you taking the time to give it a review. Thanks so much! 
