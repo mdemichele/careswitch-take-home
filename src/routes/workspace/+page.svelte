@@ -1,7 +1,7 @@
 <script lang="ts">
-	import * as Table from '$lib/components/ui/table';
 	import Button from '$lib/components/ui/button/button.svelte';
 	import ArrowLeft from 'lucide-svelte/icons/arrow-left';
+	import WorkspaceForm from './workspace-form.svelte';
 
 	let { data } = $props();
 </script>
@@ -21,5 +21,7 @@
 	</div>
 
 	<!-- Form section -->
-	<div class="space-y-6 rounded-md border p-4"></div>
+	<div class="space-y-6 rounded-md border p-4">
+		<WorkspaceForm users={data.users} data={data.form} />
+	</div>
 </div>

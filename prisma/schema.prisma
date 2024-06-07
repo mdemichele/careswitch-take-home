@@ -28,9 +28,9 @@ model Workspace {
 // I'm opting for familiarity over efficiency, but in a production environment, I'd definitely
 // not store unnecessary metadata in order to optimize for cost and performance.
 model UsersInWorkspace {
-  user        User      @relation(fields: [userId], references: [id])
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId      String
-  workspace   Workspace @relation(fields: [workspaceId], references: [id])
+  workspace   Workspace @relation(fields: [workspaceId], references: [id], onDelete: Cascade)
   workspaceId String
   assignedAt  DateTime  @default(now())
   assignedBy  String
